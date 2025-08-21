@@ -15,11 +15,11 @@ clap = { version = "4.5.41", features = ["derive", "string"] }
 config_parser2 = "0.1.6"
 crossterm = "0.29.0"
 dirs-next = "2.0.0"
-librespot-connect = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", optional = true }
-librespot-core = { git = "https://github.com/librespot-org/librespot.git", branch = "dev" }
-librespot-oauth = { git = "https://github.com/librespot-org/librespot.git", branch = "dev" }
-librespot-playback = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", optional = true }
-librespot-metadata = { git = "https://github.com/librespot-org/librespot.git", branch = "dev" }
+librespot-connect = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", optional = true, default-features = false, features = ["rustls-tls-webpki-roots"] }
+librespot-core = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", default-features = false, features = ["rustls-tls-webpki-roots"] }
+librespot-oauth = { git = "https://github.com/librespot-org/librespot.git",branch = "dev", default-features = false, features = ["rustls-tls-webpki-roots"] }
+librespot-playback = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", optional = true, default-features = false, features = ["rustls-tls-webpki-roots"] }
+librespot-metadata = { git = "https://github.com/librespot-org/librespot.git", branch = "dev", default-features = false, features = ["rustls-tls-webpki-roots"] }
 log = "0.4.27"
 chrono = "0.4.41"
 reqwest = { version = "0.12.22", features = ["json"] }
